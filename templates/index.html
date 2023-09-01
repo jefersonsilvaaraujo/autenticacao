@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>App de Notas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao App de Notas</h1>
+        <p><a href="{{ url_for('register') }}">Registrar</a> ou <a href="{{ url_for('login') }}">Fazer Login</a></p>
+    </div>
+</body>
+</html>

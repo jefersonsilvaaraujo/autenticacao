@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Notas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Notas</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <p>Lista de notas...</p>
+        <p><a href="{{ url_for('index') }}">Sair</a></p>
+    </div>
+</body>
+</html>
